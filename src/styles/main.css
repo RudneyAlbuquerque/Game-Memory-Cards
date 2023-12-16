@@ -112,8 +112,10 @@ h2 {
 @media only screen and (max-width: 430px) {
 
     .game {
+        display: flex;
         justify-content:center;
-        align-items: center;
+        align-items:flex-start;
+        width: 350px;
     }
 
     .item {
@@ -121,6 +123,8 @@ h2 {
         height: 80px;
     }
 
-
+    body {
+        align-items: flex-start;
+    }
 
 }

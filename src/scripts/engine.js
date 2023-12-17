@@ -30,6 +30,7 @@ for (let i = 0; i < emojis.length; i++) {
     document.querySelector(".game").appendChild(box);
     box.classList.add("boxOpen");
     setTimeout(()=> box.classList.remove("boxOpen"), 5000);
+    clearTimeout()
 }
 
 
@@ -62,6 +63,7 @@ function checkMatch() {
     if (document.querySelectorAll(".boxMatch").length === emojis.length) {
         //endTime();
         alert("You Win");
+        clearInterval(count);
     }
 }
 
@@ -84,7 +86,8 @@ function contador() {
     document.getElementById("timer").innerHTML = tempo;
 }
 
-setInterval(contador, 1000);
+let count = setInterval(contador, 1000);
+
 
 // function endTime(){
 //     //const imageUrl='./src/images/time.png'
